@@ -1,0 +1,36 @@
+/* pages/capital/capital.wxss */
+/* 左二右中布局 */
+.box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 108rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-left {
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #333333;
+}
+
+.box-right {
+  font-size: 28rpx;
+  font-family: Roboto, Roboto-Regular;
+  font-weight: 400;
+  text-align: RIGHT;
+  color: #ff0000;
+}
+
+.box-time {
+  font-size: 24rpx;
+  font-family: Roboto, Roboto-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #999999;
+  margin-top: 12rpx;
+}

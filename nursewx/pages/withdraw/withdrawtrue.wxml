@@ -1,0 +1,7 @@
+<view class="signtrue">
+  <image src="/image/moneysign.png"></image>
+</view>
+<view class="btntext">申请成功</view>
+<view class="btn" bindtap="gettomoney">
+  返回个人中心
+</view>

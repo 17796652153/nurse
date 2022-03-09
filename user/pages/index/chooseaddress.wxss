@@ -1,0 +1,55 @@
+/* pages/index/chooseaddress.wxss */
+.bindingBox {
+   /* display: flex; */
+   /* justify-content: center; */
+   width: 100%;
+   padding: 0rpx 4%;
+   box-sizing: border-box;
+   align-items: center;
+}
+
+.bindingBox2 {
+   justify-content: space-between;
+   margin-top: 20rpx;
+}
+
+.bindingBox .name {
+   font-size: 32rpx;
+   color: #333;
+   display: inline-block;
+   width: 27%;
+   text-align: left;
+}
+
+.avatar {
+   width: 72rpx;
+   height: 72rpx;
+   border-radius: 50%;
+}
+
+.bindingBox .bindingBoxInputView {
+}
+
+.bindingBox textarea {
+   box-sizing: border-box;
+   border-radius: 20rpx;
+   padding: 20rpx;
+   margin-top: 30rpx;
+   width: 690rpx;
+   color: #333;
+   background-color: #eeeeee;
+}
+
+.btn {
+   position: fixed;
+   left: 30rpx;
+   bottom: 200rpx;
+   width: 690rpx;
+   height: 76rpx;
+   opacity: 1;
+   background: linear-gradient(90deg, #fd67a4, #ff6cb4 30%, #d742f6 60%, #fd68a8 100%);
+   border-radius: 46rpx;
+   line-height: 76rpx;
+   color: #fff;
+   text-align: center;
+}

@@ -1,0 +1,73 @@
+<view class="bactop">
+      <image src="/image/bgmy.png" mode="scaleToFill" class="bg"></image>
+      <view class="flexac headerbox">
+            <view class="headerBox flexac" wx:if="{{user==''}}" bindtap="login">
+                  <!-- <button class="header" bindtap="login"></button> -->
+                  <image class="header" src="/image/header.png"></image>
+                  <text class="headerBoxTextNickName">请点击头像进行登陆</text>
+            </view>
+            <view class="flexac" wx:else>
+                  <image src="{{user.avatar}}" mode="scaleToFill" class="header"></image>
+                  <text>{{user.username}}</text>
+            </view>
+            <view class="flexac headerright">
+                  <image src="/image/setting.png" mode="scaleToFill" bindtap="getsetting"></image>
+                  <image src="/image/message1.png" mode="scaleToFill" bindtap="getmessage"></image>
+            </view>
+      </view>
+</view> 
+<view class="shopcar">
+      <view class="all">
+            <text>我的订单</text>
+            <view class="allgo" data-index="0" bindtap="getallorder">查看全部订单<image src="/image/arrow.png"></image>
+            </view>
+      </view>
+      <view class="imgcar">
+            <view class="unorder" wx:if="{{myorder==false}}">当前无未完成订单</view> 
+            <view class="order" wx:else data-index="{{orderdetail[0].id}}" bindtap="getmap">
+                  <view>
+                        <view class="type">进行中</view>
+                        <view class="gettime" wx:if="{{orderdetail[0].give==1}}">预计到达时间 {{estimate_time}}</view>
+                        <view class="gettime" wx:if="{{orderdetail[0].give==2||orderdetail[0].give==3}}">预约单时间是 {{orderdetail[0].door_time}}</view>
+                  </view>
+                  <image src="{{orderdetail[0].nurse_avatar}}" mode="scaleToFill" class="header"></image>
+            </view>
+      </view> 
+</view> 
+<view class="safety">
+      <view class="safetyc">
+            <image src="/image/safety.png" mode="scaleToFill" class="safetyimg"></image>
+            <text>安全中心</text>
+      </view>
+      <view class="safetydetail">
+            上门人员已全部经过人脸、实名、资质认证
+      </view>
+</view>
+<view class="shopcar">
+      <view class="all">
+            <text>服务</text>
+            <!-- <view class="allgo" data-index="0" bindtap="getallorder">查看全部订单<image src="/image/arrow.png"></image>
+            </view> -->
+      </view>
+      <view class="imgcar1">
+            <button class="btnContact"   open-type="contact" bindcontact="handleContact">11</button>
+            <view class="cargo">
+                  <image src="/image/kefu.png" ></image>
+                  <view>联系客服</view>
+            </view>
+           
+            <view class="cargo" >
+                  <image src="/image/jubao.png" data-index="1" bindtap="getallorder"></image>
+                  <view>举报</view>
+            </view>
+            <view class="cargo">
+                  <image src="/image/jianjie.png" data-index="2"  bindtap="getallorder"></image>
+                  <view>程序介绍</view>
+            </view>
+            <view class="cargo">
+                  <image src="/image/about.png" data-index="3"   bindtap="getallorder"></image>
+                  <view>关于我们</view>
+            </view> 
+      </view>
+</view>
+<login bindshowLogin="Login1" wx:if="{{showLogin}}"></login>

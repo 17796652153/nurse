@@ -1,0 +1,35 @@
+<view class="way">
+  <view class="bname">提现方式</view>
+  <view class="waywx">微信</view>
+</view>
+<!-- <view class="way">
+  <view  class="bname">微信账号</view>
+  <input type="text" placeholder="请输入微信账号" value="{{wxNumber}}" bindinput="getwxNumber"></input>
+</view>
+<view class="way">
+  <view  class="bname">姓名</view>
+  <input type="text" placeholder="请输入姓名" value="{{name}}" bindinput="getname"></input>
+</view>
+<view class="way">
+  <view  class="bname">银行卡号</view>
+  <input type="text" placeholder="请输入银行卡号" value="{{creditCard}}" bindinput="getcreditCard"></input>
+</view>
+<view class="way">
+  <view  class="bname">开户行</view>
+  <input type="text" placeholder="请输入开户行" value="{{openBank}}" bindinput="getopenBank"></input>
+</view> -->
+<view class="amount">
+  <view class="title">提现金额</view>
+  <view class="amountmoney">
+    <text>￥</text>
+    <input type="text" class="inputbox" value="{{amoney}}" bindinput="getmoney"/>
+  </view>
+</view>
+<view class="allamount-box">
+  当前可用余额{{allmoney}}
+  <!-- <text class="allamount " bindtap="getall">全部提现</text> -->
+  <view class="allamount1">提示* 因微信官方要求，每日提现不能超过200元，如超过200元次日可重复申请提现。</view>
+</view>
+<view class="btn" bindtap="deposit">
+  提现
+</view>

@@ -1,0 +1,13 @@
+<!-- <view class="bindingBox">
+     <text  class="name">地址</text>
+     <view  class="bindingBoxInputView">
+      <region-picker style="height: 112rpx;line-height: 112rpx;" bind:change="regionChange" province="{{province}}" city="{{city}}" county="{{county}}"></region-picker>
+     </view>
+</view> -->
+<view class="bindingBox">
+     <text class="name">详细地址</text>
+     <view class="bindingBoxInputView">
+      <textarea type="text" placeholder-class="placeholder"placeholder='请填写详细地址（例：二单元306）' value="{{detail}}"  bindinput="getdetail"></textarea>
+     </view>
+</view>
+<view class="btn" bindtap="getbtn">完成</view>

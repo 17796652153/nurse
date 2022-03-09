@@ -1,0 +1,56 @@
+/* pages/bindingPhone/bindingPhone.wxss */
+.bindingBox{
+   display:flex;
+   justify-content: center;
+   width:100%;
+   padding:0rpx 4%;
+   box-sizing: border-box;
+   align-items: center;
+}  
+.bindingBox text{
+     font-size:32rpx;
+     color:#333;
+     display: inline-block;
+     width:31%;
+     text-align:left;
+}
+.bindingBox .bindingBoxInputView{
+    width:69%;
+    border-bottom:1rpx solid #e5e5e5;
+}
+.bindingBox input{
+    height:130rpx;
+}
+.sendPhone{
+   display: inline-block;
+   width:180rpx;
+   height:48rpx;
+   background:#00a3ff;
+   color:#FFF;
+   font-size:24rpx;
+   text-align: center;
+   line-height:48rpx;
+   border-radius:24rpx;
+}
+.hide{
+  display:none;
+}
+.btn {
+  margin: 40rpx 30rpx;
+  height: 76rpx;
+  opacity: 1;
+  background: #00a3ff;
+  border-radius: 10rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #FFF;
+}
+.tishi{
+  margin:  0  30rpx;
+  font-size: 28rpx;
+font-family: PingFang SC, PingFang SC-Regular;
+color: #666666;
+}
+.tishi text{
+  color: #FE6668;
+}

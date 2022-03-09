@@ -1,0 +1,8 @@
+.region-picker {
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.province,.line,.city,.county{
+  color: #333333;
+}

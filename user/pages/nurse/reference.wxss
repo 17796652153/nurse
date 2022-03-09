@@ -1,0 +1,40 @@
+/* pages/nurse/nurse.wxss */
+.content {
+  margin: 0 30rpx;
+}
+
+.bigtitle {
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: #00a3ff;
+}
+
+.gantan {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.subtitle {
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.navBtm {
+  width: 72rpx;
+  height: 8rpx;
+  background: #00a3ff;
+  margin-top: 12rpx;
+}
+
+.idcard {
+  width: 330rpx;
+  height: 200rpx;
+}
+
+.box {
+  width: 690rpx;
+  height: 360rpx;
+}

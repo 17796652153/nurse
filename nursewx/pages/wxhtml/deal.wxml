@@ -1,0 +1,17 @@
+<view class="dealbox" data-index="7" bindtap="getwxhtml" >
+  <text  >法律条款和隐私政策</text>
+  <image class="arrowimg" src="/image/arrow.png" mode="scaleToFill"  ></image>
+</view>
+<view class="dealbox" data-index="8" bindtap="getwxhtml" >
+  <text >规则中心</text>
+  <image class="arrowimg" src="/image/arrow.png" mode="scaleToFill" ></image>
+</view>
+<view class="dealbox" data-index="1" bindtap="getwxhtml" >
+  <text >证照信息</text>
+  <image  class="arrowimg" src="/image/arrow.png" mode="scaleToFill"></image>
+</view>
+<button class="btnContact"   open-type="contact" bindcontact="handleContact"></button>
+<view class="dealbox"  >
+  <text>客服中心</text>
+  <image class="arrowimg" src="/image/arrow.png" mode="scaleToFill"></image>
+</view>

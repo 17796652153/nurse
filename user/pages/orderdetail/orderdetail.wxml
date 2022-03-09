@@ -1,0 +1,88 @@
+<view class="bg {{zhushetrue? 'bg1' : ''}} ">
+  <view class="bg-top">
+    <text wx:if="{{indent.order_type==1}}">等待接单</text>
+    <text wx:if="{{indent.order_type==2}}">进行中</text>
+    <!-- <text wx:if="{{indent.order_type==2&&indent.order_type==1}}">已出发</text>
+    <text wx:if="{{indent.order_type==2&&indent.order_type==2}}">已到达</text> -->
+    <text wx:if="{{indent.order_type==3}}">订单完成</text>
+    <text wx:if="{{indent.order_type==4}}">已取消</text>
+    <view class="topbtn" bindtap="readadvice">查看医嘱</view> 
+  </view>
+  <view class="cloakbox">
+    <image class="cloak" src="/image/wcloak.png"></image>
+    <text>{{time}}</text>
+  </view> 
+  <view class="cloakbox" wx:if="{{indent.give==2}}" >
+    <image class="cloak" src="/image/wcloak.png"></image>
+    <text >{{indent.door_time}}</text>
+  </view>
+  <view class="cloakbox mr20">
+    <image class="dian" src="/image/reddian.png"></image>
+    <text>{{indent.address}}/{{indent.order_address}}{{indent.extend_address}}</text>
+  </view>
+  <view wx:if="{{zhushetrue}}">
+    <view class="cloakbox1">
+      <image class="jia" src="/image/wjia.png"></image>
+      <text>需要注射/消毒包（{{indent.zs_money}}元）</text>
+    </view>
+    <view class="zhushe">包含相关注射/消毒耗材</view>
+    <view class="zhushe">耗材均是医疗使用级别，全新包装未开封</view>
+  </view>
+</view>
+<view class="weiyi">
+  <view class="safety safety1" wx:if="{{indent.order_type>1}}">
+    <view class="safetyc1">
+      <view>
+        <text class="name">{{indent.nurse_name}}</text>
+        <text class="nian">{{user.hospital}} · 工作{{user.trade_time}}年</text>
+      </view>
+      <image class="card" src="/image/idcard.png" bindtap="gettonurse"></image>
+    </view>
+    <view class="bottomsafety">
+      <view class="flexac" bindtap="call110">
+        <image class="baojing" src="/image/110.png"></image>
+        110报警
+      </view>
+      <view class="flexac" data-index="{{user.phone}}" bindtap="getphone">
+        <image class="baojing" src="/image/tel.png"></image>
+        打电话
+      </view>
+      <view class="flexac" bindtap="customerphone">
+        <image class="baojing" src="/image/kufuxiao.png"></image>
+        联系客服
+      </view>
+    </view>
+  </view>
+  <view class="safety" wx:if="{{indent.order_type>1}}">
+    <view class="safetyc">
+      <image src="/image/safety.png" mode="scaleToFill" class="safetyimg"></image>
+      <text>安全中心</text>
+    </view>
+    <view class="safetydetail">
+      上门人员已全部经过人脸、实名、资质认证
+    </view>
+  </view>
+  <view class="givemoney">
+    <view class="money  {{moneyture? 'mb20' : ''}} ">
+      <text>{{indent.money}}<text class="moneyyuan">元</text></text>
+      <image bindtap="changemoneytrue" src="/image/arrow-bottom.png" mode="scaleToFill"
+        class="safetyimg {{moneyture? 'safetyimgtrue' : ''}} ">
+      </image>
+    </view>
+    <view class="moneyzhan" wx:if="{{moneyture}}">
+      <view class="shangmen">
+        <text>上门人员上门费用</text>
+        <text>{{indent.order_money}}元</text>
+      </view>
+      <view class="shangmen" wx:if="{{zhushetrue}}">
+        <text>注射/消毒包费用</text>
+        <text>{{indent.zs_money}}元</text>
+      </view>
+      <view class="allhe">
+        合计：{{indent.money}}元
+      </view>
+    </view>
+  </view>
+</view>
+<view class="btn" bindtap="cancelbtn" wx:if="{{indent.order_type==1&&indent.take==1 || indent.order_type==0 &&indent.take==1}}">取消订单</view> 
+<view class="btn" bindtap="cancelbtn" wx:if="{{indent.order_type==1&&indent.take==2 || indent.order_type==0 &&indent.take==2}}">取消审核中</view> 

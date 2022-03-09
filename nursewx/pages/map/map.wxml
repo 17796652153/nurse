@@ -1,0 +1,171 @@
+<view class="topbox">
+  <view style="color: #333333;font-size: 36rpx;font-family: PingFang SC, PingFang SC-Regular;">
+    离线中...
+  </view>
+  <view class="btn btn1" bindtap="getline">
+    上线
+  </view>
+  <view class="three"><text class="myaddress">我的位置</text>{{address}}</view>
+</view>
+<view class="topbox" wx:if="{{indent.order_type==1}}">
+  <view class="order">
+    <view class="order-top">
+      <view><text style="color: #00a3ff;margin-right: 80rpx;">{{indent.goods_name}}</text><text>订单天数{{indent.days}}天</text></view>
+      <text bindtap="getchooseimg" style="color: #1cadff;">导航</text>
+      <image src="/image/yizhu.png" mode="scaleToFill" class="home4" bindtap="getyizhu"></image>
+    </view>
+    <view class="cloakbox">
+      <image class="cloak" src="/image/cloak.png"></image>
+      <text wx:if="{{indent.give==1}}">{{indent.add_time}}</text>
+      <text wx:if="{{indent.give==2||indent.give==3}}">{{indent.door_time}}</text>
+    </view>
+    <view class="cloakbox mr20">
+      <image class="dian" src="/image/reddian.png"></image>
+      <text>{{indent.address}}</text>
+    </view>
+    <view class="cloakbox mr20" >
+      <image class="dian" src="/image/reddian.png" style="opacity: 0;"></image>
+      <text>{{indent.order_address}}</text><text wx:if="{{indent.extend_address!=''}}">{{indent.extend_address}}</text>
+    </view>
+  </view>
+  <view class="cloakbox2" wx:if="{{indent.zs_money>0}}">
+    <view class="cloakbox1">
+      <text bindtap="getchooseimg">需要注射/消毒包（{{indent.zs_money}}元）</text>
+    </view>
+    <view class="zhushe">耗材均是医疗使用级别，全新包装未开封</view>
+  </view>
+  <view class="myorder">
+    本单费用<text class="moneyyuan">{{indent.money}}</text>元
+  </view>
+  <view class="btn" bindtap="getTake">
+    接单
+  </view>
+</view>
+<!--有单子 -->
+<view class="topbox2" wx:if="{{indent.order_type>1}}">
+  <view class="title-right2 " bindtap="changemodel2">
+    <text class="textclamp">公告：<text style="color: #F360C6;"> {{message}}</text></text>
+  </view>
+  <view class="topbox1">
+    <view class="one">
+      <text wx:if="{{indent.order_type==2&&indent.status==0&&indent.give!=3}}">已接单 {{indent.goods_name}}</text>
+      <text wx:if="{{indent.order_type==2&&indent.status==0&&indent.give==3&&indent.cancel_status==0}}">已接单 {{indent.goods_name}}</text>
+      <text wx:if="{{indent.order_type==2&&indent.status==0&&indent.give==3&&indent.cancel_status==1}}">订单取消审核中</text>
+      <text wx:if="{{indent.order_type==2&&indent.status==1 ||indent.status==2 }}">进行中 {{indent.goods_name}}</text>
+      <view class="flexac" bindtap="call110" wx:if="{{indent.order_type==2&&indent.status==2 }}">
+        <image src="/image/110red.png" mode="scaleToFill" class="shiming"></image>
+        <text class="text110">110报警</text>
+      </view>
+      <view style="display: flex;align-items: center;" wx:if="{{indent.order_type==2&&indent.status!=2 }}">
+        <text bindtap="getchooseimg" style="color: #1cadff;">导航</text>
+        <!-- <image src="/image/route.png" mode="scaleToFill"  bindtap="getchooseimg"></image> -->
+        <image src="/image/home5.png" mode="scaleToFill" class="home5" data-index="{{indent.phone}}" bindtap="getphone"></image>
+        <image src="/image/yizhu.png" mode="scaleToFill" class="home4" bindtap="getyizhu"></image>
+      </view>
+    </view>
+    <!-- <view style="color: #333333;font-size: 28rpx;font-family: PingFang SC, PingFang SC-Regular;">
+    <text wx:if="{{indent.give==1&&indent.order_type==2&&indent.status==0&&indent.take==1}}">预计到达时间{{estimate_time}}</text>
+    <text wx:if="{{indent.give==2&&indent.order_type==2&&indent.status==0&&indent.take==1}}">预约单时间是{{indent.door_time}}</text>
+    <text wx:if="{{indent.order_type==2&&indent.status==1&&indent.take==1}}">已出发</text>
+    <text wx:if="{{indent.order_type==2&&indent.take==2}}">用户已经取消订单了</text>
+    <text wx:if="{{indent.order_type==2&&indent.status==2&&indent.take==1}}">已到达</text>
+  </view> -->
+    <view class="cloakbox">
+      <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+      <text wx:if="{{indent.give==1}}">{{indent.add_time}}</text>
+      <text wx:if="{{indent.give==2||indent.give==3}}">{{indent.door_time}}</text>
+    </view>
+    <view class="cloakbox mr20">
+      <image class="dian" src="/image/reddian.png" mode="scaleToFill"></image>
+      <text>{{indent.address}}</text>
+    </view>
+    <view class="cloakbox mr20" >
+      <image class="dian" src="/image/reddian.png" style="opacity: 0;"></image>
+      <text>{{indent.order_address}}</text><text wx:if="{{indent.extend_address!=''}}">{{indent.extend_address}}</text>
+    </view>
+    <view class="cloakbox2" style="margin-top:30rpx" wx:if="{{indent.zs_money>0}}">
+      <view class="cloakbox1">
+        <text bindtap="getchooseimg">需要注射/消毒包（{{indent.zs_money}}元）</text>
+      </view>
+      <view class="zhushe">耗材均是医疗使用级别，全新包装未开封</view>
+    </view>
+    <view class="myorder">
+      本单费用<text class="moneyyuan">{{indent.money}}</text>元
+    </view>
+    <!-- <view class="twobox">
+    <view class="two">
+      <image src="{{indent.avatar}}" mode="scaleToFill" class="hedpic"></image>
+      <view class="two-right">
+        <view style="line-height: 80rpx;">
+          {{indent.name}}
+        </view>
+      </view>
+    </view>
+    <view style="display: flex;align-items: center;">
+      <text bindtap="getchooseimg" style="color: #1cadff;">导航</text> -->
+    <!-- <image src="/image/route.png" mode="scaleToFill"  bindtap="getchooseimg"></image> -->
+    <!-- <image src="/image/home5.png" mode="scaleToFill" class="home5" data-index="{{indent.phone}}" bindtap="getphone"></image>
+      <image src="/image/yizhu.png" mode="scaleToFill" class="home4" bindtap="getyizhu"></image>
+    </view>
+  </view> -->
+
+    <!-- <view class="three"><text class="myaddress">对方位置</text>{{indent.address}}</view> -->
+    <view class="btn" wx:if="{{indent.order_type==2&&indent.status==0}}" style="margin-top: 50rpx;" data-index="1" bindtap="getstart">
+      现在出发
+    </view>
+    <view class="btn" wx:if="{{indent.order_type==2&&indent.status==1}}" style="margin-top: 50rpx;" data-index="2" bindtap="getstart">
+      我已到达
+    </view>
+    <view class="btn" wx:if="{{indent.order_type==2&&indent.status==2}}" style="margin-top: 50rpx;" bindtap="getfinishorder">
+      完成订单
+    </view>
+
+    <view class="four">
+      <view class="flexac" bindtap="cancelbtn">
+        <image src="/image/home1.png" mode="scaleToFill" class="gantan"></image>
+        <text>取消订单</text>
+      </view>
+      <view class="flexac" bindtap="detailbtn">
+        <image src="/image/home2.png" mode="scaleToFill" class="gantan"></image>
+        <text>订单详情</text>
+      </view>
+      <view class="flexac" bindtap="customerphone">
+        <image src="/image/home3.png" mode="scaleToFill" class="gantan"></image>
+        <text>联系客服</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="map">
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location bindregionchange="regionchange" style="width: 100%; height: {{view.Height}}px;"></map>
+</view>
+
+<view class="model" wx:if="{{model2}}" bindtap="changemodel2">
+</view>
+<view class="modelimg" wx:if="{{model2}}">
+  <view class="modebg">
+    <!-- <view style="color:#333333;display: flex;align-items: center;font-size: 36rpx;margin-bottom: 40rpx;">
+      <text>购买天数说明</text>
+      <image src="./../../image/two/point.png" mode="scaleToFill" class="arrowbtn1" bindtap="changemodel2"></image>
+    </view> -->
+    <view>
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="modebgbottom" bindtap="changemodel2">
+      我已了解
+    </view>
+  </view>
+</view>
+
+<!-- 加减地图 -->
+<view class="addprev">
+  <view bindtap="addscale">
+    <image src="/image/add.png" mode="scaleToFill" class="add"></image>
+  </view>
+  <view  bindtap="prevscale">
+    <image src="/image/prev.png" mode="scaleToFill" class="prev"></image>
+  </view>
+</view>

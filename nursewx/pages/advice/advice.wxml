@@ -1,0 +1,8 @@
+<!--pages/advice/advice.wxml-->
+<view class="content">
+  <view class="subtitle">
+    医嘱详情
+    <view class="navBtm"></view>
+  </view>
+  <image src="{{image}}" mode="scaleToFill" class="uploadbox" bindtap="previewImg1"></image>
+</view>

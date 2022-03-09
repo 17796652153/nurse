@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "region-picker": "../../components/region-picker/region-picker"
+  },
+  "navigationBarTitleText": "修改地址"
+}

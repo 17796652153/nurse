@@ -1,0 +1,16 @@
+<!--pages/message/message.wxml-->
+<view style="margin-bottom: 40rpx;" wx:for="{{message}}" key="{{index}}">
+  <view class="time">{{item.time}}</view>
+<view class="card">
+  <view class="title" wx:if="{{item.type==1}}">订单待支付提醒</view>
+  <view class="title" wx:if="{{item.type==2}}">接单提醒</view>
+  <view class="title" wx:if="{{item.type==3}}">上门人员取消订单提醒</view>
+  <view class="title" wx:if="{{item.type==4}}">后台审核通过取消订单提醒</view>
+  <view class="title" wx:if="{{item.type==5}}">后台审核拒绝取消订单提醒</view>
+  <view class="detail" wx:if="{{item.type==1}}">您有一笔订单还未支付，上门人员挣钱不容易，请尽快完 成支付哟！</view>
+  <view class="detail" wx:if="{{item.type==2}}">您有一笔订单已被接单，请留意时间呦~，亲，记得要 查看上门人员的资质哦！</view>
+  <view class="detail" wx:if="{{item.type==3}}">上门人员这边有事情取消了订单</view>
+  <view class="detail" wx:if="{{item.type==4}}">您的取消订单审核通过了</view>
+  <view class="detail" wx:if="{{item.type==5}}">您的取消订单被拒绝了</view>
+</view>
+</view>

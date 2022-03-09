@@ -1,0 +1,31 @@
+<view class="title">
+  订单信息
+</view>
+<view class="orderbox">
+  <view class="order">
+    <view class="order-top">
+      <view>实施单 <text style="margin-left: 20rpx;">50元</text></view>
+      <!-- <view class="arrowright">
+      <text>已完成</text>
+      <image class="arrowimg" src="/image/arrow.png"></image>
+    </view> -->
+      <!-- <view class="arrowright1">
+<text>未支付</text>
+<image class="arrowimg" src="/image/arrow-red.png"></image>
+</view> -->
+      <!-- <view class="arrowright2">
+                        <text>进行中</text>
+                        <image class="arrowimg" src="/image/arrow-blue.png"></image>
+                  </view> -->
+    </view>
+    <view class="cloakbox">
+      <image class="cloak" src="/image/cloak.png"></image>
+      <text>2021-06-03 15:32</text>
+    </view>
+    <view class="cloakbox mr20">
+      <image class="dian" src="/image/reddian.png"></image>
+      <text>东方之门地铁站6号口</text>
+    </view>
+  </view>
+  <text class="btnsmall">已完成</text>
+</view>

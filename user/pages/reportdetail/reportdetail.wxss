@@ -1,0 +1,44 @@
+/* pages/reportdetail/reportdetail.wxss */
+.content {
+  margin: 0 30rpx;
+}
+
+.title {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 88rpx;
+  opacity: 1;
+  background: #e9f3f9;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  padding-left: 30rpx;
+  color: #333333;
+  line-height: 88rpx;
+  margin-bottom: 40rpx;
+}
+
+.textdetail {
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 294rpx;
+  opacity: 1;
+  background: #f0f0f0;
+  border-radius: 20rpx;
+  padding: 15rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.btn {
+  position: fixed;
+  bottom: 108rpx;
+  width: 630rpx;
+  margin: 0 30rpx;
+  height: 88rpx;
+  opacity: 1;
+  background: linear-gradient(98deg, #63b2ff, #bd00ff 100%);
+  border-radius: 54rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+}

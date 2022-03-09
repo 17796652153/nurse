@@ -1,0 +1,9 @@
+/* pages/route/route.wxss */
+/* .map{
+  position: relative;
+} */
+.btn1{
+  position: fixed;
+  bottom: 50rpx;
+  left: 0;
+}

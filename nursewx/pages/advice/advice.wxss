@@ -1,0 +1,44 @@
+/* pages/advice/advice.wxss */
+.content {
+  margin: 0 30rpx;
+}
+
+.subtitle {
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.navBtm {
+  width: 72rpx;
+  height: 8rpx;
+  background: #00a3ff;
+  margin-top: 12rpx;
+}
+
+.uploadbox {
+  width: 690rpx;
+  height: 480rpx;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 20rpx;
+  text-align: center;
+}
+
+.uploadimg {
+  width: 160rpx;
+  height: 160rpx;
+  padding-top: 160rpx;
+}
+
+.btn {
+  position: fixed;
+  bottom: 108rpx;
+  width: 630rpx;
+  margin: 0 30rpx;
+  height: 88rpx;
+  opacity: 1;
+  background: linear-gradient(98deg, #63b2ff, #bd00ff 100%);
+  border-radius: 54rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+}

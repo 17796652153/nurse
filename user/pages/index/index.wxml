@@ -1,0 +1,153 @@
+<view style="width: 100%;height: {{statusbar}}px;background-color: #30e8ea;"></view>
+<view class="page-section page-section-spacing swiper noticeBox">
+  <swiper interval="5000" autoplay="true" duration="500" style="height: 200px;">
+    <swiper-item wx:for="{{background2}}" wx:key='index' data-index="{{item}}" bindtap="getdetail">
+      <image src="{{item.image}}" mode="scaleToFill" style="width:100%;height:200px"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="contantbox">
+  <view class="contanttitle">{{contanttitle}}</view>
+  <view class="title-right" wx:if="{{service>0}}">
+    <view>您有一个正在<text style="color:#F360C6">进行中</text>的订单</view>
+    <view class="title-btn" bindtap="getmap1">去查看</view>
+  </view>
+  <!-- arrow-blue1 -->
+  <view class="title-right">
+    <text style="color:#F360C6;font-weight: bold;font-size: 38rpx;">{{needlelist[needleindex].name}}</text>
+    <view class="title-box" bindtap="changemodel1">
+      <text>选择其他项目</text>
+      <image src="./../../image/arrow-blue1.png" mode="scaleToFill" class="arrowbtn1"></image>
+    </view>
+  </view>
+  <view class="hushibox">
+    <view class="hushititle"  wx:if="{{isOpen==1}}">
+      <!-- hutrue -->
+      <view class="huleft {{hushiid==1 ? 'hutrue' : ''}}" data-id="1" bindtap="changehushi">现在需要上门人员</view>
+      <view class="huright {{hushiid==2 ? 'hutrue' : ''}}" data-id="2" bindtap="changehushi">预约上门人员</view>
+    </view>
+    <view class="hushititle" wx:if="{{isOpen==0}}">
+      <!-- hutrue -->
+      <view class="huleft {{hushiid==1 ? 'hutrue' : ''}}" data-id="1" bindtap="changehushi">现在需要</view>
+      <view class="huright {{hushiid==2 ? 'hutrue' : ''}}" data-id="2" bindtap="changehushi">预约上门</view>
+    </view>
+    <!-- 1 -->
+    <view wx:if="{{hushiid==1}}">
+      <view style="font-size: 32rpx;color: #F360C6;margin-left: 50rpx;margin-top:30rpx" wx:if="{{address!='请选择您的位置'}}">您当前的位置</view>
+      <view class="addres" bindtap="bindchoose">
+        <image src="/image/arrow.png" mode="scaleToFill"></image>
+        <text>{{addressname}}</text>
+      </view>
+      <view style="margin-left: 20rpx;color: #999;margin-top: 20rpx;"  wx:if="{{address!='请选择您的位置'}}">
+        {{address}}
+      </view>
+      <view class="edit" bindtap="binddetailaddress" wx:if="{{address!='请选择您的位置'}}">
+        <text class="editdian"></text>
+        <text>{{daddress}}</text>
+        <!-- <image src="/image/pen.png" mode="scaleToFill"></image> -->
+      </view>
+    </view>
+    <!-- 2 -->
+    <view wx:if="{{hushiid==2}}">
+      <view class="datetime">
+        <view class="flexac" style="margin-left: 20rpx;font-size: 28rpx;width: 100%;">
+          <picker style="width: 100%;" mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" range="{{dateTimeArray}}">
+            <view class="selectDate tui-picker-detail">
+              {{estimate_in_time}}
+            </view>
+          </picker>
+        </view>
+
+        <!-- {{estimate}}
+        {{estimate1}}
+        {{time1}} 
+        {{time2}} -->
+        <!-- <view class="edit edit1">
+          <text>修改预约时间</text>
+          <image src="/image/hongpen.png" mode="scaleToFill"></image>
+        </view> -->
+      </view>
+      <view style="font-size: 32rpx;color: #F360C6;margin-left: 50rpx;margin-top:30rpx" wx:if="{{address!='请选择您的位置'}}">您当前的位置</view>
+      <view class="addres" bindtap="bindchoose">
+        <image src="/image/arrow.png" mode="scaleToFill"></image>
+        <text>{{addressname}}</text>
+      </view>
+      <view style="margin-left: 20rpx;color: #999;margin-top: 20rpx;"  wx:if="{{address!='请选择您的位置'}}">
+        {{address}}
+      </view>
+      <view class="edit" bindtap="binddetailaddress" wx:if="{{address!='请选择您的位置'}}">
+        <text class="editdian"></text>
+        <text>{{daddress}}</text> 
+        <!-- <image src="/image/pen.png" mode="scaleToFill"></image> -->
+      </view>
+    </view>
+  </view>
+  <view class="btn" style=" background: #999;" bindtap="getaddress" wx:if="{{address=='请选择您的位置'&&isOpen==1}}">叫上门人员</view>
+  <view class="btn" bindtap="getmap" wx:if="{{address!='请选择您的位置'&&isOpen==1}}">叫上门人员</view>
+  <view class="btn" style=" background: #999;" bindtap="getaddress" wx:if="{{address=='请选择您的位置'&&isOpen==0}}">下单</view>
+  <view class="btn" bindtap="getmap" wx:if="{{address!='请选择您的位置'&&isOpen==0}}">下单</view> 
+  <!-- 警告 红铃铛 -->
+  <view class="redbell" wx:if="{{isOpen==1}}"> 
+    <view class="redbellbox">
+      <view style="width:55rpx;height:55rpx;margin-right:20rpx;overflow: hidden;flex: 1;">
+        <image src="/image/lingdang.png" mode="scaleToFill" style="width: 100%;height: 100%;"></image>
+      </view>
+      <text style="flex: 10;">上门人员上门，请记得先仔细检查上门人员携带的身份证、上门人员执业资格证、毕业证。</text>
+    </view>
+    <view class="reddetail" bindtap="getreference">
+      <text>查看模板</text>
+    </view>
+  </view>
+  <view style=" margin: 40rpx 30rpx;" wx:if="{{isOpen==1}}">
+    <!-- <text> 关注"萌医促排"公众号随时了解上门人员信息</text>
+    <view style="   display: flex;justify-content: flex-end;">
+      <view class="smbtn" bindtap="changemodel">去关注</view>
+    </view> -->
+    <image src="/image/two/follow.png" mode="scaleToFill" style="width: 100%;height: 150rpx;" bindtap="changemodel"></image>
+  </view>
+  <!-- 图片 -->
+
+  <view class="page-section page-section-spacing swiper noticeBox1">
+    <swiper interval="5000" autoplay="true" duration="500" style="height: 130px;">
+      <swiper-item wx:for="{{background}}" wx:key='index' data-index="{{item}}" bindtap="getdetail">
+        <image src="{{item.image}}" mode="scaleToFill" style="width:100%;height:106px"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="page-section page-section-spacing swiper noticeBox1">
+    <swiper interval="5000" autoplay="true" duration="500" style="height: 130px;">
+      <swiper-item wx:for="{{background1}}" wx:key='index' data-index="{{item}}" bindtap="getdetail">
+        <image src="{{item.image}}" mode="scaleToFill" style="width:100%;height:106px"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<!-- 登陆 -->
+<login bindshowLogin="Login" wx:if="{{showLogin}}"></login>
+<view class="official">
+  <official-account></official-account>
+</view>
+<!-- 模态窗 展示图片 -->
+<view class="model" wx:if="{{model}}" bindtap="changemodel">
+</view>
+<view class="modelimg" wx:if="{{model}}">
+  <image src="/image/gongzonghao.jpg"></image>
+  <view class="btn" catchtap="saveimg">保存图片</view>
+</view>
+<!-- 选择针剂 -->
+<view class="model" wx:if="{{model1}}" bindtap="changemodel1">
+</view>
+<view class="modelimg" wx:if="{{model1}}">
+  <view class="title-right1">
+    <view class="title-one">
+      <text style="color:#F360C6;font-weight: bold;font-size: 38rpx;">{{needlelist[needleindex].name}}</text>
+      <view class="title-box">
+        <text>选择其他项目</text>
+        <image src="./../../image/arrow-blue1.png" mode="scaleToFill" class="arrowbtn1 arrowtrans"></image>
+      </view>
+    </view>
+    <view class="title-choosebox">
+      <view wx:for="{{needlelist}}" wx:key="index" data-index="{{index}}" bindtap="changeneedle" class=" title-choose {{ index== needleindex ? 'title-true':''}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>

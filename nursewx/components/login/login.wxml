@@ -1,0 +1,11 @@
+<!-- 登录遮罩层 -->
+<view class="mask" bindtap="hideLogin"></view>
+<!-- 登录 -->
+<view class="customerTel">
+  <view class="customerTxt" style="margin-top:40rpx;">请先登录才能进行以下操作！！</view>
+  <view class="customerLogin">
+    <button  bindtap="login">登录</button>
+  </view>
+  <image class="customerClose" src="/image/close2.png" bindtap="hideLogin"></image>
+  <!-- <view class="customerClose" bindtap="hideLogin"></view> -->
+</view>

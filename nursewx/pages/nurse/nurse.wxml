@@ -1,0 +1,45 @@
+<!--pages/nurse/nurse.wxml-->
+<view class="topbox">
+  <view class="one">
+    <image src="/image/shiming.png" mode="scaleToFill" class="shiming"></image>
+    <text>已实名、资质认证</text>
+  </view>
+  <view class="two">
+    <image src="{{user.avatar}}" mode="scaleToFill" class="hedpic"></image>
+    <view class="two-right">
+      <view style="margin-bottom: 15rpx;">
+        <text>{{user.username}}</text> <text class="twonian">工作{{user.trade_time}}年</text>
+      </view>
+      <view>{{user.hospital}}</view>
+    </view>
+  </view>
+  <view class="three">共接单：{{user.orderCount}}单</view>
+  <view class="four">
+    <image src="/image/gantan.png" mode="scaleToFill" class="gantan"></image>
+    <text>已实名、资质认证</text>
+  </view>
+</view>
+<view class="content">
+  <view class="subtitle">
+    身份证
+    <view class="navBtm"></view>
+  </view>
+  <view>
+    <image style="margin-right: 30rpx;" src="{{user.nurse_image1}}" mode="scaleToFill" class="idcard"></image>
+    <image src="{{user.nurse_image2}}" mode="scaleToFill" class="idcard"></image>
+  </view>
+  <view class="subtitle">
+    护士执业资格证
+    <view class="navBtm"></view>
+  </view>
+  <view>
+    <image src="{{user.nurse_image3}}" mode="scaleToFill" class="box"></image>
+  </view>
+  <view class="subtitle">
+    毕业证
+    <view class="navBtm"></view>
+  </view>
+  <view style="margin-bottom: 40rpx;">
+    <image src="{{user.nurse_image4}}" mode="scaleToFill" class="box"></image>
+  </view>
+</view>

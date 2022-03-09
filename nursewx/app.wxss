@@ -1,0 +1,48 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+.mt20{
+  margin-top: 20rpx;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+view,text{
+  font-family: OPPOSans, OPPOSans-Medium;
+} 
+
+
+/* 暂无账单 */
+.no-bill{
+  width: 574rpx;
+  margin: 186rpx auto;
+}
+.no-bill-img{
+  width: 574rpx;
+  height: 488rpx;
+}
+.no-bill-txt{
+  margin-top: 24rpx;
+  font-size: 28rpx;
+  font-family: OPPOSans, OPPOSans-Regular;
+  font-weight: 400;
+  text-align: CENTER;
+  color: #999999;
+}
+
+.no-data{
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+}
+
+.flexac{
+  display: flex;
+  align-items: center;
+}

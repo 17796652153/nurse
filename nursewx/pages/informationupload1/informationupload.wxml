@@ -1,0 +1,82 @@
+<!--pages/bindingPhone/bindingPhone.wxml-->
+<view class="subtitle">
+     个人信息
+     <view class="navBtm"></view>
+</view>
+<view class="bindingBox">
+     <text>姓名</text>
+     <view class="bindingBoxInputView">
+          <input type="text" placeholder-class="placeholder" placeholder="请填写姓名" value="{{username}}" bindinput="usernameInput" />
+     </view>
+</view>
+<view class="bindingBox">
+     <text>手机号</text>
+     <view class="bindingBoxInputView">
+          <input type="text" placeholder-class="placeholder" value="{{phone}}" placeholder="请填写手机号" bindinput="phoneInput" />
+     </view>
+</view>
+<view class="bindingBox">
+     <text>就业时间</text>
+     <view class="bindingBoxInputView">
+          <picker mode="date" value="{{date}}" start="1950-01-01" end="2099-12-31" bindchange="bindDateChange">
+               <view class="picker {{date=='请选择就业时间'? 'picker1' : ''}}">
+                    {{date}}
+               </view>
+          </picker>
+     </view>
+</view>
+<view class="bindingBox">
+     <text>现职医院</text>
+     <view class="bindingBoxInputView">
+          <input type="text" placeholder-class="placeholder" placeholder="请输入医院名称" value="{{hospital}}" bindinput="hospitalInput" />
+     </view>
+</view>
+<view class="bindingBox">
+     <text>验证码</text>
+     <view class="bindingBoxInputView" style="display:flex;align-items: center;">
+          <input type="text" placeholder-class="placeholder" placeholder="请填写验证码" bindinput="codeInput" value="{{phone_code}}" />
+          <view class="sendPhone {{hide == 1 ? 'hide':''}}" bindtap="sendPhone">获取验证码</view>
+          <view class="sendPhone {{hide == 2 ? 'hide':''}}" bindtap="sendPhone">重新获取({{num}})</view>
+     </view>
+</view>
+<view class="subtitle">
+     身份证
+     <view class="navBtm"></view>
+</view>
+
+
+<view style="display: flex;">
+     <view style="position: relative;">
+          <image src="/image/idupload.png" wx:if="{{pics.length==0}}" mode="scaleToFill" class="uploadimg" data-index='1' bindtap="uploadPic"></image>
+          <image bindtap="priveimg" src="{{pics[0]}}" wx:if="{{pics.length>0}}" mode="scaleToFill" class="uploadimg" data-index='1'></image>
+          <image src="/image/closepic.png" bindtap="delPic" wx:if="{{pics.length>0}}" mode="scaleToFill" class="closeimg" data-index='1' ></image>
+     </view>
+     <view style="position: relative;">
+          <image src="/image/idupload1.png" wx:if="{{pics1.length==0}}" mode="scaleToFill" class="uploadimg" data-index='2' bindtap="uploadPic"></image>
+          <image bindtap="priveimg" src="{{pics1[0]}}" wx:if="{{pics1.length>0}}" mode="scaleToFill" class="uploadimg" data-index='2'></image>
+          <image src="/image/closepic.png" bindtap="delPic" wx:if="{{pics1.length>0}}" mode="scaleToFill" class="closeimg" data-index='2' ></image>
+     </view>
+</view>
+
+<view class="subtitle">
+     护士执业资格证
+     <view class="navBtm"></view>
+</view>
+<view style="position: relative;margin-right: 30rpx;">
+     <image src="/image/uploadbox.png" wx:if="{{pics2.length==0}}" mode="scaleToFill" class="uploadimg1" data-index='3' bindtap="uploadPic"></image>
+     <image bindtap="priveimg" src="{{pics2[0]}}" wx:if="{{pics2.length>0}}" mode="scaleToFill" class="uploadimg1" data-index='3'></image>
+     <image src="/image/closepic.png" bindtap="delPic" wx:if="{{pics2.length>0}}" mode="scaleToFill" class="closeimg" data-index='3' ></image>
+</view>
+
+<view class="subtitle">
+     毕业证
+     <view class="navBtm"></view>
+</view>
+<view style="position: relative;margin-right: 30rpx;">
+     <image src="/image/uploadbox.png" wx:if="{{pics3.length==0}}" mode="scaleToFill" class="uploadimg1" data-index='4' bindtap="uploadPic"></image>
+     <image bindtap="priveimg" src="{{pics3[0]}}" wx:if="{{pics3.length>0}}" mode="scaleToFill" class="uploadimg1" data-index='4'></image>
+     <image src="/image/closepic.png" bindtap="delPic"  wx:if="{{pics3.length>0}}" mode="scaleToFill" class="closeimg" data-index='4'></image>
+</view>
+<view class="btn" bindtap="getsubmit">
+     提交信息
+</view>

@@ -1,0 +1,33 @@
+/* pages/message/message.wxss */
+.page {
+  background: #f5f5f5;
+}
+
+.time {
+  color: #333333;
+font-size: 28rpx;
+font-family: PingFang SC, PingFang SC-Regular;
+padding: 30rpx 0;
+text-align: center;
+margin-bottom: 40rpx;
+}
+
+.card {
+  box-sizing: border-box;
+  margin: 2rpx 30rpx;
+  opacity: 1;
+  background: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #666666;
+  padding: 40rpx 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #333333;
+  margin-bottom: 30rpx;
+}

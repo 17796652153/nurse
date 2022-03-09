@@ -1,0 +1,34 @@
+<view class="title">
+  请选择需要举报的订单
+</view>
+<view style="padding-bottom:100px;">
+  <view class="nodetailbox" wx:if="{{report.length==0}}">
+    <image class="nodetail" src="/image/nodetail.png" mode="aspectFit"></image>
+    <view>暂无数据</view> 
+  </view>
+  <block wx:if="{{report.length>0}}">
+    <view class="order" wx:for="{{report}}">
+      <view class="order-top">
+        <view wx:if="{{item.give==1}}">实时单</view>
+        <view wx:if="{{item.give==2}}">预约单</view>
+      </view>
+      <view class="topradio">
+        <view class="cloakbox">
+          <image class="cloak" src="/image/cloak.png"></image>
+          <text>{{item.add_time}}</text>
+        </view>
+        <image wx:if="{{item.radiotrue}}" class="radio" src="/image/radiotrue.png" data-index="{{index}}" bindtap="clickradio"></image>
+        <image wx:else class="radio" src="/image/radio.png" data-index="{{index}}" bindtap="clickradio"></image>
+      </view>
+
+      <view class="cloakbox mr20">
+        <image class="dian" src="/image/reddian.png"></image>
+        <text>{{item.address}}</text>
+      </view>
+    </view>
+  </block> 
+</view> 
+
+<view class="btn" wx:if="report.length>0"  bindtap="getreportdetail">
+  去举报
+</view> 

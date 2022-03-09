@@ -1,0 +1,66 @@
+<view class="bactop">
+      <image src="/image/bgmy.png" mode="scaleToFill" class="bg"></image>
+      <view class="flexac headerbox">
+            <view class="headerBox flexac" wx:if="{{user==''}}" bindtap="login">
+                  <!-- <button class="header" bindtap="login"></button> -->
+                  <image class="header" src="/image/header.png"></image>
+                  <text class="headerBoxTextNickName">请点击头像进行登陆</text>
+            </view>
+            <view class="flexac" wx:else>
+                  <image src="{{user.avatar}}" mode="scaleToFill" class="header"></image>
+                  <text>{{user.nurse_name}}</text>
+            </view>
+            <view class="flexac headerright">
+                  <image src="/image/setting.png" mode="scaleToFill" bindtap="getsetting"></image>
+                  <image src="/image/message1.png" mode="scaleToFill" bindtap="getmessage"></image>
+            </view>
+      </view>
+</view>
+<view class="shopcar">
+      <view class="all">
+            <text>我的订单</text>
+            <view class="allgo" data-index="0" bindtap="gettakeorder">查看全部订单<image src="/image/arrow.png"
+                        mode="scaleToFill"></image>
+            </view>
+      </view>
+      <view class="unorder" wx:if="{{myorder==false}}">当前无未完成订单</view>
+      <block wx:else>
+            <view class="orderbox" wx:for="{{reward}}">
+                  <view class="order">
+                        <view class="order-top">
+                              <view wx:if="{{item.give==1}}">实时单 X {{item.days}}天 {{item.goods_name}}</view>
+                              <view wx:if="{{item.give==2}}">预约单 X {{item.days}}天 {{item.goods_name}}</view>
+                              <view wx:if="{{item.give==3}}">套餐单 X {{item.days}}天 {{item.goods_name}}</view>
+                        </view>
+                        <view class="cloakbox">
+                              <image class="cloak" src="/image/cloak.png"></image>
+                              <text  wx:if="{{item.give==1}}">{{item.add_time}}</text>
+                              <text  wx:if="{{item.give==2||item.give==3}}">{{item.door_time}}</text>
+                        </view>
+                        <view class="cloakbox mr20">
+                              <image class="dian" src="/image/reddian.png"></image>
+                              <text>{{item.address}}</text>
+                        </view>
+                  </view>
+                  <text class="btnred" data-index="{{item.id}}" bindtap="gettomap">去完成</text>
+            </view>
+      </block>
+</view>
+<view class="shopcar">
+      <view class="all">
+            <text>我的订单</text>
+            <view class="allgo" data-index="0" bindtap="getcapital">查看余额明细<image src="/image/arrow.png"
+                        mode="scaleToFill"></image>
+            </view>
+      </view>
+      <view class="orderbox orderbox1">
+            <view class="order1">
+                  余额（元）<text>{{user.user_money}}</text>
+            </view>
+            <text class="btnsmall" bindtap="getwithdraw">提现</text>
+      </view>
+</view>
+<view class="btn" bindtap="getline">
+      下线
+</view>
+<login bindshowLogin="Login1" wx:if="{{showLogin}}"></login>

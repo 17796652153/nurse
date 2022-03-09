@@ -1,0 +1,355 @@
+
+
+.title {
+   box-sizing: border-box;
+   width: 750rpx;
+   height: 330rpx;
+   background: linear-gradient(#53aaff 0%, #ca34ff 100%);
+}
+
+
+.title-left {
+   width: 33%;
+   height: 72rpx;
+   text-align: center;
+   margin-left: 30rpx;
+   margin-top: 8rpx;
+}
+
+.title-left image {
+   width: 52rpx;
+   height: 52rpx;
+   margin-top: 10rpx;
+}
+
+.title-right {
+   box-sizing: border-box;
+   overflow: hidden;
+   margin: 0 30rpx 28rpx;
+   width: 690rpx;
+   height: 100rpx;
+   line-height:100rpx;
+   background: #ffffff;
+   border-radius: 20rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+   padding-left: 20rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   font-weight: 400;
+   color: #333333;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title-btn {
+   width: 116rpx;
+   height: 48rpx;
+   line-height: 48rpx;
+   text-align: center;
+   color: #ffffff;
+   font-size: 30rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   font-weight: 400;
+   background: #f360c6;
+   border-radius: 24rpx;
+   margin-right: 50rpx;
+}
+
+.title-box {
+   display: flex;
+   align-items: center;
+   color: #00a3ff;
+}
+
+.arrowbtn1 {
+   width: 28rpx;
+   height: 28rpx;
+   margin-right: 20rpx;
+   margin-left: 12rpx;
+}
+
+.contantbox {
+   width: 100%;
+   background-color: #fff8fb;
+   border-top-left-radius: 40rpx;
+   border-top-right-radius: 40rpx;
+   position: relative;
+   top: -40rpx;
+}
+
+.contanttitle {
+   padding: 30rpx;
+   color: #333333;
+   font-size: 34rpx;
+   font-weight: 600;
+   font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.hushibox {
+   box-sizing: border-box;
+   margin: 0 30rpx;
+   width: 690rpx;
+   height:500rpx;
+   background: #ffffff;
+   border-radius: 20rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+}
+
+.hushititle {
+   display: flex;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.huleft {
+   width: 50%;
+   height: 68rpx;
+   opacity: 1;
+   background: #e5e5e5;
+   border-radius: 0rpx 0rpx 68rpx 0rpx;
+   text-align: center;
+   line-height: 68rpx;
+}
+
+.huright {
+   width: 50%;
+   height: 68rpx;
+   opacity: 1;
+   background: #e5e5e5;
+   border-radius: 0rpx 0rpx 0rpx 68rpx;
+   text-align: center;
+   line-height: 68rpx;
+}
+
+.hutrue {
+   background: #fff;
+   color: #00a3ff;
+}
+
+.addres {
+   font-size: 36rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   font-weight: 600;
+   color: #333333;
+   display: flex;
+   align-items: center;
+   margin-top: 40rpx;
+   margin-left: 20rpx;
+}
+
+.addres image {
+   width: 16rpx;
+   height: 16rpx;
+   opacity: 1;
+   margin-right: 20rpx;
+}
+
+.edit {
+   font-size: 32rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #00a3ff;
+   margin-top: 20rpx;
+   display: flex;
+   align-items: center;
+   margin-left: 20rpx;
+   margin-right: 20rpx;
+   /* padding-bottom: 78rpx;
+   border-bottom: 1px solid #eee; */
+}
+
+.editdian {
+   width: 16rpx;
+   height: 16rpx;
+   background: #00a3ff;
+   border-radius: 4rpx;
+   margin-right: 20rpx;
+}
+
+.edit1 {
+   color: #fe6668;
+}
+
+.edit image {
+   width: 24rpx;
+   height: 24rpx;
+   opacity: 1;
+   margin-left: 10rpx;
+   margin-right: 20rpx;
+}
+
+.datetime {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   color: #333333;
+   font-size: 42rpx;
+   font-family: PingFang SC, PingFang SC-Medium;
+   font-weight: 600;
+   margin-top: 40rpx;
+}
+
+.picker {
+   margin: 0 40rpx 0 20rpx;
+}
+
+.selectDate {
+   font-size: 36rpx;
+}
+
+/* 红铃铛 */
+.smbtn {
+   width: 120rpx;
+   text-align: center;
+   height: 50rpx;
+   line-height: 50rpx;
+   background: #2e9501;
+   border-radius: 10rpx;
+   color: #fff;
+   margin-top: 20rpx;
+}
+
+.redbell {
+   position: relative;
+   margin: 40rpx 30rpx;
+   opacity: 1;
+   background: #ffffff;
+   border-radius: 20rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+}
+
+.redbellbox {
+   display: flex;
+   margin: 20rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #333333;
+}
+
+.redimage {
+   width: 55rpx;
+   height: 55rpx;
+   margin-right: 20rpx;
+}
+
+.reddetail {
+   color: #00a3ff;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   position: absolute;
+   right: 35rpx;
+   bottom: 15rpx;
+}
+
+.detailimg {
+   width: 28rpx;
+   height: 28rpx;
+   margin-top: 3rpx;
+}
+
+.noticeBox {
+   width: 100%;
+   height: 400rpx;
+   vertical-align: middle;
+}
+
+/* .imgs {
+   margin-left: 30rpx;
+   width: 690rpx;
+   height: 252rpx;
+   vertical-align: middle;
+   margin-bottom: 40rpx;
+} */
+.btn {
+   margin: 30rpx 30rpx 40rpx;
+   width: 690rpx;
+   height: 88rpx;
+   opacity: 1;
+   background: linear-gradient(90deg, #fd67a4, #ff6cb4 30%, #d742f6 60%, #fd68a8 100%);
+   border-radius: 54rpx;
+   font-size: 36rpx;
+   font-family: PingFang SC, PingFang SC-Medium;
+   color: #fff;
+   text-align: center;
+   line-height: 88rpx;
+}
+
+
+.model {
+   position: fixed;
+   z-index: 10;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+}
+ 
+.modelimg {
+   text-align: center;
+   position: fixed;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 11;
+}
+
+.official {
+   position: relative;
+   top: 870rpx;
+}
+
+.arrowtrans {
+   transform: rotate(180deg);
+   margin-right:0
+}
+
+.title-right1 {
+   box-sizing: border-box;
+   overflow: hidden;
+   margin: 0 28rpx;
+   width: 690rpx;
+   background: #ffffff;
+   border-radius: 20rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+   padding-left: 20rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   font-weight: 400;
+   color: #333333;
+   padding: 20px;
+}
+
+.title-one {
+   display: flex;
+   justify-content: space-between;
+}
+
+.title-choosebox {
+   width: 500rpx;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.title-choose {
+   width: 210rpx; 
+   /* padding:0 10rpx; */
+   height: 52rpx;
+   background: #ffffff;
+   border: 2rpx solid #f360c6;
+   border-radius: 16rpx;
+   color: #f360c6;
+   line-height: 52rpx;
+   margin-top: 40rpx;
+}
+
+.title-true {
+   background: #f360c6;
+   color: #ffffff;
+}
+
+
+.noticeBox1{
+   margin-left: 30rpx;
+   width: 690rpx;
+   vertical-align: middle;
+}

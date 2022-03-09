@@ -1,0 +1,119 @@
+<!--pages/order/order.wxml-->
+<view class="swiper-tab">
+       <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待完成
+              <view class="navBtm"></view>
+       </view>
+       <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已完成
+              <view class="navBtm"></view>
+       </view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 62}}rpx;padding-bottom:30rpx;" bindchange="bindChange">
+       <swiper-item>
+              <view class="nodetailbox" wx:if="{{reward.length==0}}">
+                     <image class="nodetail" src="/image/nodetail.png" mode="aspectFit"></image>
+                     <view>暂无数据</view>
+              </view>
+              <block wx:if="{{reward.length>0}}">
+                     <view class="orderbox" wx:for="{{reward}}" data-index="{{item.id}}" bindtap="getorder">
+                            <view class="order">
+                                   <view class="order-top">
+                                          <view><text style="margin-right: 20rpx;" wx:if="{{item.give==1}}">实时单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==2}}">预约单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==3}}">套餐单</text>{{item.money}}元</view>
+                                   </view>
+                                   <view class="cloakbox">
+                                          <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+                                          <text wx:if="{{item.give==1}}">{{item.add_time}}</text>
+                                          <text wx:if="{{item.give==2||item.give==3}}">{{item.door_time}}</text>
+                                   </view>
+                                   <view class="cloakbox mr20">
+                                          <image class="dian" src="/image/reddian.png" mode="scaleToFill"></image>
+                                          <text>{{item.address}}</text>
+                                   </view>
+                            </view>
+                            <text class="btnsmall1" data-index="{{item.id}}" bindtap="getmap">去完成</text>
+                     </view>
+              </block>
+       </swiper-item>
+       <swiper-item>
+              <view class="nodetailbox" wx:if="{{reward.length==0}}">
+                     <image class="nodetail" src="/image/nodetail.png" mode="aspectFit"></image>
+                     <view>暂无数据</view>
+              </view>
+              <block wx:if="{{reward.length>0}}">
+                     <view class="orderbox1" wx:for="{{reward}}" wx:key="index">
+                            <view style="display: flex;align-items: center;justify-content: space-between;" data-index="{{item.id}}" bindtap="getorder">
+                                   <view class="order">
+                                          <view class="order-top">
+                                                 <view><text style="margin-right: 20rpx;" wx:if="{{item.give==1}}">实时单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==2}}">预约单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==3}}">套餐单</text>X {{item.days}}天 {{item.goods_name}}
+                                                        <!-- {{item.money}}元<text></text> -->
+                                                 </view>
+                                          </view>
+                                          <view class="cloakbox">
+                                                 <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+                                                 <text wx:if="{{item.give==1}}">{{item.add_time}}</text>
+                                                 <text wx:if="{{item.give==2||item.give==3}}">{{item.door_time}}</text>
+                                          </view>
+                                          <view class="cloakbox mr20">
+                                                 <image class="dian" src="/image/reddian.png" mode="scaleToFill"></image>
+                                                 <text>{{item.address}}</text>
+                                          </view>
+                                   </view>
+                                   <text class="btnsmall2" wx:if="{{item.take==2}}" data-index="{{item.id}}" catchtap="getmap">已取消</text>
+                                   <text class="btnsmall1" wx:else>进行中</text>
+                            </view>
+                            <view class="completenessbox" wx:if="{{item.showcom==false}}">
+                                   <text bindtap="changeshowcom" data-index="{{index}}">点击查看完成度</text>
+                                   <image bindtap="changeshowcom" data-index="{{index}}" class="completeness" src="/image/arrow-blue.png" mode="scaleToFill"></image>
+                            </view>
+                            <view class="complelist" wx:if="{{item.showcom}}">
+                                   <view class="complelistbox" wx:for="{{item.child}}" wx:for-item="cell" wx:key="cell.id">
+                                          <view>
+                                                 <view class="order-top1">
+                                                        第{{cell.day_str}}天
+                                                 </view>
+                                                 <view class="cloakbox" wx:if="{{cell.time!=null}}">
+                                                        <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+                                                        <text>{{cell.time}}</text>
+                                                 </view>
+                                          </view>
+                                          <text class="btnsmall2" style="margin-bottom:0" wx:if="{{cell.status==0}}">未开始</text>
+                                          <text class="btnsmall1" style="margin-bottom:0" data-index="{{item.id}}" catchtap="getmap" wx:if="{{cell.status==1||cell.status==2||cell.status==4}}">去完成</text>
+                                          <text class="btnsmall2" style="margin-bottom:0" wx:if="{{cell.status==3}}">已完成</text>
+                                   </view>
+                                   <view class="completenessbox">
+                                          <text bindtap="changeshowcom" data-index="{{index}}">点击收起</text>
+                                          <image class="completeness completeness1" src="/image/arrow-blue.png" mode="scaleToFill" bindtap="changeshowcom" data-index="{{index}}"></image>
+                                   </view>
+                            </view>
+                     </view>
+              </block>
+       </swiper-item> 
+       <swiper-item>
+              <view class="nodetailbox" wx:if="{{reward.length==0}}">
+                     <image class="nodetail" src="/image/nodetail.png" mode="aspectFit"></image>
+                     <view>暂无数据</view>
+              </view>
+              <block wx:if="{{reward.length>0}}">
+                     <view class="orderbox" wx:for="{{reward}}" data-index="{{item.id}}" bindtap="getorder">
+
+                            <view class="order">
+                                   <view class="order-top">
+                                          <view><text style="margin-right: 20rpx;" wx:if="{{item.give==1}}">实时单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==2}}">预约单</text><text style="margin-right: 20rpx;" wx:if="{{item.give==3}}">套餐单</text>X {{item.days}}天 {{item.goods_name}}
+                                                 <!-- {{item.money}}元<text></text> -->
+                                          </view>
+                                   </view>
+                                   <view class="cloakbox">
+                                          <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+                                          <text wx:if="{{item.give==1}}">{{item.add_time}}</text>
+                                          <text wx:if="{{item.give==2||item.give==3}}">{{item.door_time}}</text>
+                                   </view>
+                                   <view class="cloakbox mr20">
+                                          <image class="dian" src="/image/reddian.png" mode="scaleToFill"></image>
+                                          <text>{{item.address}}</text>
+                                   </view>
+                            </view>
+                            <text class="btnsmall2">已完成</text>
+                     </view>
+              </block>
+       </swiper-item>
+</swiper>

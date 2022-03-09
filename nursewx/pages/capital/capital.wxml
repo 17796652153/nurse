@@ -1,0 +1,12 @@
+<view class="box" wx:for="{{array}}" wx:key="index">
+  <view class="box-left">
+    <view wx:if="{{item.type==1}}">接单 </view>
+    <view wx:elif="{{item.type==2}}">提现</view>
+    <view wx:elif="{{item.type==3}}">取消用户手续费</view>
+    <view class="box-time">{{item.time}}</view>
+  </view>
+  <view class="box-right">
+    <view wx:if="{{item.type==2}}" style="color:#333">-{{item.money}}</view>
+    <view wx:else>+{{item.money}}</view>
+  </view>
+</view>

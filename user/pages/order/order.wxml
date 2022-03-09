@@ -1,0 +1,77 @@
+<view class="title">
+  订单信息
+</view>
+
+<view class="nodetailbox" wx:if="{{orderdetail.length==0}}">
+  <image class="nodetail" src="/image/nodetail.png" mode="aspectFit"></image>
+  <view>暂无数据</view>
+</view>
+<block wx:if="{{orderdetail.length>0}}">
+  <view wx:for="{{orderdetail}}" :key="{{index}}">
+
+    <view class="order" data-index="{{item.id}}" bindtap="getdetail">
+      <view class="order-top">
+        <view wx:if="{{item.give==1}}">实时单 {{item.goods_name}}</view>
+        <view wx:if="{{item.give==2}}">预约单 {{item.goods_name}}</view>
+        <view wx:if="{{item.give==3}}">套餐 X {{item.days}}天 {{item.goods_name}}</view>
+        <view class="arrowright2" wx:if="{{item.order_type==0}}">
+          <text>未支付</text>
+          <image class="arrowimg" src="/image/arrow-blue.png"></image>
+        </view>
+        <view class="arrowright2" wx:if="{{item.order_type==1}}">
+          <text>已支付</text>
+          <image class="arrowimg" src="/image/arrow-blue.png"></image>
+        </view>
+        <view class="arrowright2" wx:if="{{item.order_type==2}}">
+          <text>进行中</text>
+          <image class="arrowimg" src="/image/arrow-blue.png"></image>
+        </view>
+        <view class="arrowright2" wx:if="{{item.order_type==3}}">
+          <text>已完成</text>
+          <image class="arrowimg" src="/image/arrow-blue.png"></image>
+        </view>
+        <view class="arrowright2" wx:if="{{item.order_type==4}}">
+          <text>已取消</text>
+          <image class="arrowimg" src="/image/arrow-blue.png"></image>
+        </view>
+      </view>
+      <view class="cloakbox">
+        <image class="cloak" src="/image/cloak.png"></image>
+        <text>{{item.add_time}}</text>
+      </view>
+      <view class="cloakbox mr20" wx:if="{{item.give==3|| item.give==2}}">
+        <image class="cloak" src="/image/cloak.png"></image>
+        <text>{{item.door_time}}</text>
+      </view>
+      <view class="cloakbox mr20">
+        <image class="dian" src="/image/reddian.png"></image>
+        <text>{{item.address}}/{{item.order_address}}{{item.extend_address}}</text>
+      </view>
+    </view>
+
+    <view class="completenessbox" wx:if="{{item.showcom==false}}">
+      <text bindtap="changeshowcom" data-index="{{index}}">点击查看完成度</text>
+      <image bindtap="changeshowcom" data-index="{{index}}" class="completeness" src="/image/arrow-blue.png" mode="scaleToFill"></image>
+    </view>
+    <view class="complelist" wx:if="{{item.showcom}}">
+      <view class="complelistbox" wx:for="{{item.child}}" wx:for-item="cell" wx:key="cell.id">
+        <view>
+          <view class="order-top1"> 
+            第{{cell.day}}天
+          </view>
+          <view class="cloakbox" wx:if="{{cell.time!=null}}">
+            <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+            <text>{{cell.time}}</text>
+          </view>
+        </view>
+        <text class="btnsmall2" wx:if="{{cell.status==0}}">未开始</text>
+        <text class="btnsmall1" wx:if="{{cell.status==1||cell.status==2||cell.status==4}}">进行中</text>
+        <text class="btnsmall2" wx:if="{{cell.status==3}}">已完成</text>
+      </view>
+      <view class="completenessbox">
+        <text bindtap="changeshowcom" data-index="{{index}}">点击收起</text>
+        <image class="completeness completeness1" src="/image/arrow-blue.png" mode="scaleToFill" bindtap="changeshowcom" data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+</block>

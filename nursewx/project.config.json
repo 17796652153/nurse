@@ -1,0 +1,111 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": false,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.21.2",
+    "appid": "wxea02ebc02ca8cc45",
+    "projectname": "%E6%8A%A4%E5%A3%AB1",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "scripts": {},
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "登录",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "订单列表",
+                    "pathName": "pages/order/order",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "评价",
+                    "pathName": "pages/evaluate/evaluate",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "设置",
+                    "pathName": "pages/setup/setup",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "手机号绑定",
+                    "pathName": "pages/phone/phone",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "修改密码",
+                    "pathName": "pages/passwrod/passwrod",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "订单详情",
+                    "pathName": "pages/orderDetails/orderDetails",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

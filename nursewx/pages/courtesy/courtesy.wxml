@@ -1,0 +1,54 @@
+<!--pages/order/order.wxml-->
+<view class="swiper-tab">
+       <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">进行中
+              <view class="navBtm"></view>
+       </view>
+       <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已完成
+              <view class="navBtm"></view>
+       </view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300"
+       style="height:{{winHeight - 62}}rpx;padding-bottom:30rpx;" bindchange="bindChange">
+       <swiper-item>
+              <view class="orderbox">
+                     <view class="order">
+                            <view class="order-top">
+                                   <view>实施单 <text style="margin-left: 20rpx;">50元</text></view>
+                                   <!-- <view class="arrowright">
+      <text>已完成</text>
+      <image class="arrowimg" src="/image/arrow.png"></image>
+    </view> -->
+                                   <!-- <view class="arrowright1">
+<text>未支付</text>
+<image class="arrowimg" src="/image/arrow-red.png"></image>
+</view> -->
+                                   <!-- <view class="arrowright2">
+                        <text>进行中</text>
+                        <image class="arrowimg" src="/image/arrow-blue.png"></image>
+                  </view> -->
+                            </view>
+                            <view class="cloakbox">
+                                   <image class="cloak" src="/image/cloak.png" mode="scaleToFill"></image>
+                                   <text>2021-06-03 15:32</text>
+                            </view>
+                            <view class="cloakbox mr20">
+                                   <image class="dian" src="/image/reddian.png" mode="scaleToFill"></image>
+                                   <text>东方之门地铁站6号口</text>
+                            </view>
+                     </view>
+                     <text class="btnsmall">已完成</text>
+              </view>
+       </swiper-item>
+       <swiper-item>
+              <view style="margin-bottom:20rpx" wx:for="{{array}}" wx:key='index'>
+                     <view class="pickerdate">
+                            <image src="{{item.avatar}}"></image>
+                            <text>{{item.username}}</text>
+                     </view>
+                     <view class="allmoey">
+                            <text>受邀时间：{{item.create_time}}</text>
+                     </view>
+              </view>
+       </swiper-item>
+</swiper>

@@ -1,0 +1,114 @@
+/* pages/bindingPhone/bindingPhone.wxss */
+.bindingBox {
+   display: flex;
+   /* justify-content: center; */
+   width: 100%;
+   padding: 0rpx 4%;
+   box-sizing: border-box;
+   align-items: center;
+}
+
+.bindingBox2 {
+   justify-content: space-between;
+   margin-top: 20rpx;
+}
+
+.bindingBox text {
+   font-size: 32rpx;
+   color: #333;
+   display: inline-block;
+   width: 30%;
+   text-align: left;
+}
+
+.avatar {
+   width: 72rpx;
+   height: 72rpx;
+   border-radius: 50%;
+}
+
+.bindingBox .bindingBoxInputView {
+   display: flex;
+   align-items: center;
+   width: 69%;
+   border-bottom: 1rpx solid #e5e5e5;
+}
+
+.bindingBox input {
+   width: 100%;
+   height: 112rpx;
+   color: #333;
+}
+
+.sendPhone {
+   display: inline-block;
+   width: 180rpx;
+   height: 48rpx;
+   background: #00DFD7;
+   color: #FFF;
+   font-size: 24rpx;
+   text-align: center;
+   line-height: 48rpx;
+   border-radius: 24rpx;
+}
+
+.hide {
+   display: none;
+}
+
+.myClick {
+   width: 400rpx;
+   height: 100rpx;
+   display: block;
+   margin: 160rpx auto 0rpx;
+}
+
+.btn {
+   width: 330rpx;
+   height: 76rpx;
+   opacity: 1;
+   background: linear-gradient(103deg, #63b2ff, #bd00ff 100%);
+   border-radius: 46rpx;
+   line-height: 76rpx;
+   color: #fff;
+   text-align: center;
+}
+
+.flexac {
+   position: fixed;
+   bottom: 108rpx;
+   margin: 0 30rpx;
+   width: 690rpx;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.picker{
+   height: 112rpx;
+   line-height: 112rpx;
+   color: #333;
+}
+.picker1{
+   color: #888;
+}
+.flexac {
+   position: fixed;
+   bottom: 108rpx;
+   margin: 0 30rpx;
+   width: 690rpx;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.btnphone{
+   width: 172rpx;
+height: 48rpx;
+opacity: 1;
+background: #00a3ff;
+border-radius: 28rpx;
+text-align: center;
+line-height: 48rpx;
+color: #ffffff;
+font-size: 24rpx;
+font-family: PingFang SC, PingFang SC-Regular;
+}

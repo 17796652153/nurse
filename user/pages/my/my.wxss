@@ -1,0 +1,163 @@
+
+
+.bg {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+   width: 100%;
+   height: 250rpx;
+}
+
+.headerbox {
+   margin: 60rpx 50rpx 110rpx 30rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #fff;
+   justify-content: space-between;
+}
+
+.header {
+   width: 40px !important;
+   height: 40px !important;
+   border-radius: 50%;
+   margin-right: 20rpx;
+}
+.headerBoxTextNickName{
+   margin-left: 20rpx;
+}
+.headerright image {
+   width: 48rpx;
+   height: 48rpx;
+   margin-left: 20rpx;
+}
+
+/* 小汽车 */
+.shopcar {
+   margin: 20rpx 30rpx 0;
+   opacity: 1;
+   background: #ffffff;
+   border-radius: 10rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+}
+
+.all {
+   display: flex;
+   justify-content: space-between;
+   padding: 20rpx;
+   border-bottom: 1px solid #e5e5e5;
+   font-size: 32rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #000000;
+}
+
+.allgo {
+   display: flex;
+   align-items: center;
+   color: #999999;
+   font-size: 28rpx;
+}
+
+.allgo image {
+   width: 24rpx;
+   height: 24rpx;
+   margin-left: 10rpx;
+}
+
+.imgcar {
+   height: 164rpx;
+   font-size: 26rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.unorder {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #999999;
+   text-align: center;
+   line-height: 164rpx;
+}
+
+.order {
+   margin: 20rpx;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.gettime {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #333333;
+   margin-top: 20rpx;
+}
+
+.type {
+   font-size: 32rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #000000;
+}
+
+/* 安全 */
+.safety {
+   box-sizing: border-box;
+   margin: 30rpx;
+   opacity: 1;
+   background: #ffffff;
+   border-radius: 10rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+   padding: 20rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #666666;
+}
+.safetyc{
+   display: flex;
+   align-items: center;
+   color: #00a3ff;
+font-size: 32rpx;
+font-family: PingFang SC, PingFang SC-Regular;
+}
+.safetyimg {
+   width: 44rpx;
+   height: 44rpx;
+   margin-right: 20rpx;
+}
+.safetydetail{
+   margin-left: 64rpx;
+   margin-top: 15rpx;
+}
+.imgcar1{
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      /* height: 160rpx; */
+      font-size: 26rpx;
+      font-family: PingFang SC, PingFang SC-Regular;
+      padding: 30rpx 0 ;
+      position: relative;
+}
+.btnContact{
+   width: 120rpx !important;
+   height: 100% !important;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+}
+.cargo {
+   width: 120rpx;
+   text-align: center;
+   font-size: 26rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   font-weight: 400;
+}
+
+.cargofirst {
+   margin-left: 30rpx;
+}
+
+.cargo image {
+   width: 60rpx;
+   height: 60rpx;
+}

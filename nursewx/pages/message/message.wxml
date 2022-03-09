@@ -1,0 +1,8 @@
+<!--pages/message/message.wxml-->
+<view style="margin-bottom: 40rpx;" wx:for="{{message}}" key="{{index}}">
+  <view class="time">{{item.time}}</view>
+<view class="card">
+  <view class="title" >{{item.title}}</view>
+  <view class="detail" >{{item.content}}</view>
+</view>
+</view>

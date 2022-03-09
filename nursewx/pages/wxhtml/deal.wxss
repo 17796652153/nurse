@@ -1,0 +1,28 @@
+/* pages/wxhtml/deal.wxss */
+.dealbox{
+  margin: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 65rpx;
+  line-height: 65rpx;
+  border-bottom: 1px solid #eeeeee;
+  align-items: center;
+}
+.arrowimg {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.btnContact{
+  width: 690rpx !important;
+  height: 65rpx;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  background:#fff;
+  position: absolute;
+  top: 198rpx;
+  left: 30rpx;
+  opacity: 0;
+}

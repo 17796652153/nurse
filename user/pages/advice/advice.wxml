@@ -1,0 +1,23 @@
+<!--pages/advice/advice.wxml-->
+<view class="content">
+  <view class="subtitle" wx:if="{{type==1}}">
+    请上传医嘱，方便上门人员查看
+    <view class="navBtm"></view>
+  </view>
+  <view class="subtitle" wx:if="{{type==2}}">
+    医嘱详情
+    <view class="navBtm"></view>
+  </view>
+  <block wx:if="{{type==1}}">
+    <view class="uploadbox" bindtap="chooseImg" wx:if="{{pics.length==0}}">
+      <image src="/image/upload.png" mode="scaleToFill" class="uploadimg"></image>
+    </view>
+    <image wx:if="{{pics.length>0}}" src="{{pics[0]}}" mode="scaleToFill" class="uploadbox"></image>
+  </block>
+  <block wx:if="{{type==2}}">
+    <image  src="{{image}}" mode="scaleToFill" class="uploadbox"></image>
+  </block>
+  <view class="btn" bindtap="getmoney" wx:if="{{type==1}}">
+    提交并支付
+  </view>
+</view>

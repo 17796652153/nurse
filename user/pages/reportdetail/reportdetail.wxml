@@ -1,0 +1,9 @@
+<view class="title">
+  举报的订单：
+</view>
+<view class="content">
+  <textarea placeholder="请输入举报内容" name="" id="" value="{{detail}}" bindinput='getdetail'  class="textdetail"></textarea>
+  <view class="btn" bindtap="submit">
+    举报
+  </view>
+</view>

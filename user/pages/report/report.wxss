@@ -1,0 +1,119 @@
+/* pages/order/order.wxss */
+.title {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 88rpx;
+  opacity: 1;
+  background: #e9f3f9;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  padding-left: 30rpx;
+  color: #333333;
+  line-height: 88rpx;
+}
+
+.order {
+  border: 1px solid #ebebeb;
+  padding-bottom: 40rpx;
+}
+
+.order-top {
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Medium;
+  display: flex;
+  margin: 20rpx 30rpx 40rpx 50rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowright {
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.arrowright1 {
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #fe6668;
+  display: flex;
+  align-items: center;
+}
+
+.arrowright2 {
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #00a3ff;
+  display: flex;
+  align-items: center;
+}
+
+.arrowimg {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 5rpx;
+}
+
+.cloakbox {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  color: #333333;
+  margin-left: 50rpx;
+}
+
+.cloak {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.dian {
+  width: 16rpx;
+  height: 16rpx;
+  margin-right: 16rpx;
+}
+
+.mr20 {
+  margin-top: 20rpx;
+  margin-left: 56rpx;
+}
+.topradio{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50rpx;
+}
+.radio {
+  width: 32rpx;
+  height: 32rpx;
+}
+.btn {
+  position: fixed;
+  bottom: 60rpx;
+  width: 630rpx;
+  margin: 0 60rpx;
+  height: 88rpx;
+  opacity: 1;
+  background: linear-gradient(98deg, #63b2ff, #bd00ff 100%);
+  border-radius: 54rpx;
+  line-height: 88rpx;
+  text-align: center; 
+  color: #fff;
+}
+.nodetail {
+  width: 200rpx;
+  height: 150rpx;
+  margin-bottom: 30rpx;
+}
+
+.nodetailbox {
+  font-size: 36rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: CENTER;
+  color: #999999;
+  margin-top: 350rpx;
+}

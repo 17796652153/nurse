@@ -1,0 +1,249 @@
+
+.bg {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+   width: 100%;
+   height: 250rpx;
+}
+.headerbox {
+   margin: 60rpx 50rpx 110rpx 30rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #fff;
+   justify-content: space-between;
+}
+
+.header {
+   width: 40px !important;
+   height: 40px !important;
+   border-radius: 50%;
+   margin-right: 20rpx;
+}
+.headerBoxTextNickName{
+   margin-left: 20rpx;
+}
+.headerright image {
+   width: 48rpx;
+   height: 48rpx;
+   margin-left: 20rpx;
+}
+/* 小汽车 */
+.shopcar {
+   margin: 20rpx 30rpx 0;
+   opacity: 1;
+   background: #ffffff;
+   border-radius: 10rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+}
+
+.all {
+   display: flex;
+   justify-content: space-between;
+   padding: 20rpx;
+   border-bottom: 1px solid #e5e5e5;
+   font-size: 32rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #000000;
+}
+
+.allgo {
+   display: flex;
+   align-items: center;
+   color: #999999;
+   font-size: 28rpx;
+}
+
+.allgo image {
+   width: 24rpx;
+   height: 24rpx;
+   margin-left: 10rpx;
+}
+
+.orderbox {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.order {
+   /* border: 1px solid #ebebeb; */
+   padding-bottom: 40rpx;
+}
+
+.order-top {
+   font-size: 36rpx;
+   font-family: PingFang SC, PingFang SC-Medium;
+   display: flex;
+   margin: 20rpx 30rpx 40rpx 50rpx;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.arrowright {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #999999;
+   display: flex;
+   align-items: center;
+}
+
+.arrowright1 {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #fe6668;
+   display: flex;
+   align-items: center;
+}
+
+.arrowright2 {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #00a3ff;
+   display: flex;
+   align-items: center;
+}
+
+.arrowimg {
+   width: 28rpx;
+   height: 28rpx;
+   margin-left: 5rpx;
+}
+
+.cloakbox {
+   display: flex;
+   align-items: center;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #333333;
+   margin-left: 50rpx;
+}
+
+.cloak {
+   width: 28rpx;
+   height: 28rpx;
+   margin-right: 10rpx;
+}
+
+.dian {
+   width: 16rpx;
+   height: 16rpx;
+   margin-right: 16rpx;
+}
+
+.mr20 {
+   margin-top: 20rpx;
+   margin-left: 56rpx;
+}
+
+/* 安全 */
+.safety {
+   box-sizing: border-box;
+   margin: 30rpx;
+   height: 132rpx;
+   opacity: 1;
+   background: #ffffff;
+   border-radius: 10rpx;
+   box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(0, 0, 0, 0.10);
+   padding: 20rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #666666;
+}
+
+.safetyc {
+   display: flex;
+   align-items: center;
+   color: #00a3ff;
+   font-size: 32rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.safetyimg {
+   width: 44rpx;
+   height: 44rpx;
+   margin-right: 20rpx;
+}
+
+.safetydetail {
+   margin-left: 64rpx;
+   margin-top: 15rpx;
+}
+
+.imgcar1 {
+   box-sizing: border-box;
+   display: flex;
+   justify-content: space-between;
+   height: 160rpx;
+   font-size: 26rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   padding: 30rpx;
+}
+
+.cargo {
+   text-align: center;
+}
+
+.cargofirst {
+   margin-left: 30rpx;
+}
+
+.cargo image {
+   width: 60rpx;
+   height: 60rpx;
+}
+
+.unorder {
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   color: #999999;
+   text-align: center;
+   line-height: 164rpx;
+}
+.btnred {
+   color: #fe6668;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+   border: 1px solid #fe6668;
+   border-radius: 32rpx;
+   padding: 16rpx 32rpx;
+   margin-right: 20rpx;
+}
+
+.order1 {
+   margin-left: 20rpx;
+}
+
+.order1 text {
+   color: #fe6668;
+   font-size: 48rpx;
+   font-family: PingFang SC, PingFang SC-Regular;
+}
+
+.btnsmall {
+   width: 96rpx;
+   height: 48rpx;
+   opacity: 1;
+   background: linear-gradient(116deg, #63b2ff, #bd00ff 100%);
+   border-radius: 24rpx;
+   line-height: 48rpx;
+   font-size: 28rpx;
+   font-family: PingFang SC, PingFang SC-Medium;
+   color: #fff;
+   text-align: center;
+   margin: 40rpx 20rpx;
+}
+.btn {
+   position: fixed;
+   bottom: 108rpx;
+   width: 650rpx;
+   margin: 0 50rpx;
+   height: 88rpx;
+   opacity: 1;
+   background: linear-gradient(98deg, #63b2ff, #bd00ff 100%);
+   border-radius: 54rpx;
+   line-height: 88rpx;
+   text-align: center;
+   color: #fff;
+ }

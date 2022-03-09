@@ -1,0 +1,27 @@
+<!--pages/nurse/nurse.wxml-->
+
+<view class="content">
+  <text class="bigtitle">上门人员上门，请记得先仔细检查上门人员携带的身份证、上门人员 执业资格证、毕业证。</text>
+  <view class="subtitle">
+    身份证
+    <view class="navBtm"></view>
+  </view>
+  <view>
+    <image style="margin-right: 30rpx;" src="/image/recard.png" mode="scaleToFill" class="idcard"></image>
+    <image src="/image/reguohui.png" mode="scaleToFill" class="idcard"></image>
+  </view>
+  <view class="subtitle">
+    上门人员执业资格证
+    <view class="navBtm"></view>
+  </view>
+  <view>
+    <image src="/image/rehushi.png" mode="scaleToFill" class="box"></image>
+  </view>
+  <view class="subtitle">
+    毕业证
+    <view class="navBtm"></view>
+  </view>
+  <view style="margin-bottom: 40rpx;">
+    <image src="/image/rebiye.png" mode="scaleToFill" class="box"></image>
+  </view>
+</view>

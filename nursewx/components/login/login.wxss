@@ -1,0 +1,77 @@
+
+/* 遮罩层 */
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.60);
+  z-index: 1;
+}
+
+
+/* 客服电话 */
+.customerTel{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 690rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 10rpx;
+  z-index: 999;
+}
+
+.customerTxt{
+  color: #333;
+  font-size: 36rpx;
+  margin-bottom: 30rpx;
+}
+
+.customerOperation{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.operation:first-child{
+  margin-right: 40rpx;
+}
+.operation image{
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.operation text{
+  vertical-align: middle;
+}
+
+.customerLogin{
+  margin-top: 80rpx;
+}
+.customerLogin button{
+  width: 300rpx;
+  height: 76rpx;
+  line-height: 45rpx;
+  opacity: 1;
+  background: linear-gradient(97deg, #63b2ff, #bd00ff 100%);
+  border-radius: 46rpx;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+.customerClose{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.customerClose image{
+  width: 100%;
+  height: 100%;
+}

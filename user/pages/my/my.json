@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "login":"../../components/login/login"
+  },
+  "navigationBarBackgroundColor": "#ec57c7",
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle":"white"
+}

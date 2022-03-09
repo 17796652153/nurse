@@ -1,0 +1,58 @@
+{
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.9",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/advice/advice",
+    "pages/bindingPhone/bindingPhone",
+    "pages/information/information",
+    "pages/order/order",
+    "pages/orderdetail/orderdetail",
+    "pages/message/message",
+    "pages/report/report",
+    "pages/reportdetail/reportdetail",
+    "pages/nurse/nurse",
+    "pages/map/map",
+    "pages/index/chooseaddress",
+    "pages/wxhtml/wxhtml",
+    "pages/nurse/reference"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "萌医促排",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#282828",
+    "selectedColor": "#282828",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/tab/home.png",
+        "selectedIconPath": "image/tab/home1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/tab/my.png",
+        "selectedIconPath": "image/tab/my1.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

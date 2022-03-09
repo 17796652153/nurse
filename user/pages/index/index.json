@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "region-picker": "../../components/region-picker/region-picker",
+    "login":"../../components/login/login"
+  },
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "萌医促排",
+  "navigationBarTextStyle":"black"
+}
